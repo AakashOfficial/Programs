@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+  
+ <hibernate-mapping>  
+  <class name="Employee" table="Emp">  
+    
+     <id name="empid">  
+     <generator class="assigned"></generator>  
+     </id>  
+            
+    <property name="empname"></property>  
+    <property name="addr"></property>  
+            
+  </class>         
+ </hibernate-mapping>
+
+- This is a traditional process by which we can save the data. But everytime writing the mapping file is difficult. It may be error prone as we writing lot of xml code.
+
+- The below configuration we need to use in hibernate.cfg.xml file.
+
+   <!-- List of XML mapping files -->
+   <mapping resource="Employee.hbm.xml"/>
