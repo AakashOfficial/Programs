@@ -1,0 +1,14 @@
+@import url('css/font-awesome.min.css');
+.navbar-toggle {
+     margin-left: 0px;
+    border-color: transparent;
+    padding: 2px;
+    border: 1px none transparent;
+}
+.nav-toggle-left {
+    float: left;
+    margin-left: 15px;
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
