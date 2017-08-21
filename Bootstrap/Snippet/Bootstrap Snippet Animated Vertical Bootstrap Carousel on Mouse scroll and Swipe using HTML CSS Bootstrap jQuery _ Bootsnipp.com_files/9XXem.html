@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://d2d3qesrx8xj6s.cloudfront.net/iframe/9XXem -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="noindex">
+
+    <title>Full Screen Vertical Carousel with Mouse Scroll and Swipe - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    html, body{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    }
+.carousel-inner,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+  background-position:center center;
+  background-size:cover;
+}
+.slide-wrapper{display:inline;}
+.slide-wrapper .container{padding:0px;}
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.carousel-inner> .item.next ,  .carousel-inner > .item.active.right{ transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;}
+.carousel-inner > .item.prev ,.carousel-inner > .item.active.left{ transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;}
+.carousel-inner > .item.next.left , .carousel-inner > .item.prev.right , .carousel-inner > .item.active{transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;}
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+.carousel-indicators{
+position:absolute;
+top:0;
+bottom:0;
+margin:auto;
+height:20px;
+right:10px; left:auto;
+width:auto;
+}
+.carousel-indicators li{display:block; margin-bottom:5px; border:1px solid #00a199; }
+.carousel-indicators li.active{margin-bottom:5px; background:#00a199;}
+    </style>
+    <script src="./jquery-1.10.2.min.js.download"></script>
+    <script src="./bootstrap.min.js(1).download"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+	<section class="slide-wrapper">
+<div class="container">
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="fill" style=" background-color:#48c3af; background-image:url(http://www.mrwallpaper.com/wallpapers/dandelion-Background.jpg);"></div>
+      </div>
+      <div class="item">
+        <div class="fill" style="background-color:#b33f4a;background-image:url(http://3.bp.blogspot.com/-OLdE-ALRH7Y/TcABVGXzufI/AAAAAAAAAEY/aU0a9roJhtc/s1600/Amazing++Beautiful+Fresh+Flowers+%25281%2529.jpg);"></div>
+      </div>
+      <div class="item">
+        <div class="fill" style="background-color:#7fc2f4;background-image:url(https://images6.alphacoders.com/347/347733.jpg);"></div>
+      </div>
+      <div class="item">
+        <div class="fill" style="background-color:#e47794; background-image:url(http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/07/Flower-Backgrounds-HD-Wallpaper-7.jpg);"></div>
+      </div>
+    </div>
+</div>
+</div>
+</section>
+	<script type="text/javascript">
+	$(document).ready(function(){
+// invoke the carousel
+    $('#myCarousel').carousel({
+      interval: false
+    });
+
+// scroll slides on mouse scroll 
+$('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
+
+        if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            $(this).carousel('prev');
+			
+        }
+        else{
+            $(this).carousel('next');
+			
+        }
+    });
+
+//scroll slides on swipe for touch enabled devices 
+
+ 	$("#myCarousel").on("touchstart", function(event){
+ 
+        var yClick = event.originalEvent.touches[0].pageY;
+    	$(this).one("touchmove", function(event){
+
+        var yMove = event.originalEvent.touches[0].pageY;
+        if( Math.floor(yClick - yMove) > 1 ){
+            $(".carousel").carousel('next');
+        }
+        else if( Math.floor(yClick - yMove) < -1 ){
+            $(".carousel").carousel('prev');
+        }
+    });
+    $(".carousel").on("touchend", function(){
+            $(this).off("touchmove");
+    });
+});
+    
+});
+
+	</script>
+
+
+</body></html>
