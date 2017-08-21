@@ -1,0 +1,19 @@
+Class Engineer 
+ {
+     int exp,age;
+     String name,role,companyname;
+     public void coding()
+	  {
+	   System.out.println("Engineer information");
+	   System.out.println("Name of Engineer"+name \t\t"Age is"+age \t\t"Experience is"+exp \t\t"Company name is"+companyname \t\t"Post is"+role);
+	  }
+ }
+Class Check
+ {
+   public static void main(String arr[]) 
+    {
+	  Engineer a=new Engineer();
+	  a.coding();
+	}
+ }
+ 

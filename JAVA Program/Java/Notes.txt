@@ -1,0 +1,9 @@
+Inheritence:- Inheritence is the a property in which a class 
+ Types of inheritence 
+  1.Single - In Single inheritence each parent has a single child    A<-B.
+  2.Multilevel - In Multilevel inheritence there are levels of parents Grand Parents -> Parents->Child     A<-B<-C.
+  3.Hirarchical - In Hirarchical inheritence Parents and Child make Hirarchy.    A<-B<-C<-F
+                                                                                    ^<-D<-E  
+  4.Multiple - In Multilevel inheritence two parents and single child. It is not supported in java. To Support Multilevel in in java we use Interface. With 
+               the help of interface we can implement the multiple inheritence.
+  5.Hybrid - In Hybrid in two or more Inheritence are mixed then it formed. It is not supported in java.
