@@ -1,0 +1,24 @@
+body{
+	text-align:center;
+}
+#box{
+	display:block;
+	width:120px;
+	height:75;
+	opacity:0.6;
+	margin:150px auto;
+	text-align:center;
+	padding:15px;
+	background:yellow;
+	color:red;
+	border:7px solid blue;
+	-webkit-border-radius:10px;
+	-webkit-transition:-webkit-transform 5s,opacity 5s,background 5s,width 5s,height 5s;
+}
+#box:hover{
+	-webkit-transform:rotate(360deg);
+	opacity:1;
+	background:#1ec7e6;
+	width:450px;
+	height:50px;
+}

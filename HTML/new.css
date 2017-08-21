@@ -1,0 +1,50 @@
+ 
+ #body{
+  border:2px solid violet;
+  width:400px;
+  height:400px;
+  display:-webkit-box;	
+  -webkit-box-orient:horizontal;  
+ }
+#div1{
+  border:2px solid green;
+  margin:10px;
+  padding:5px;
+  background:orange;
+  color:red;
+ }
+ #div2{
+  border:2px solid green;
+  padding:5px;
+  margin:10px;
+  background:orange;
+  color:red;
+ }
+#div3{
+  border:2px solid green;
+  padding:5px;
+  margin:10px;
+  background:pink;
+  color:red;
+ }
+#div4{	
+  border:2px solid orange;
+  padding:5px;
+  margin:10px;
+  background:violet;
+  color:red;
+ }
+#div5{
+  border:2px solid pink;
+  padding:5px;
+  margin:10px;
+  background:indigo;
+  color:red;
+ }
+#div6{
+  border:2px solid yellow;
+  padding:5px;
+  margin:10px;
+  background:blue;
+  color:red;
+ }

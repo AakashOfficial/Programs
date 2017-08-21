@@ -1,0 +1,59 @@
+<html>
+ <head>
+   <title> Registration Form</title>
+   <script type="Text/javascript">
+     function validate() 
+	  {
+	    var vname = document.form1.fname.value;
+		var vaddress = document.fname.address.value;
+		var vage = document.form1.age.value;
+		var vemail = document.form1.email.value;
+		if(vname.length <1 || !vnamematch(/^[a-zA-Z]+$/"))
+		  {
+		   alert ("Enter valid name");
+		   return false;
+		  }
+		  else if(vaddress.length<1)
+		  {
+		   alert ("Enter valid Address");
+		   return false;
+		  }
+		  else if (vage.length<1)
+		   {
+		    alert ("Enter valid Age");
+			return false;
+		   }
+		  else if (vemail.length<1)
+		   {
+		    alert ("Enter valid Email");
+			return false;
+		   }
+		  else 
+		   {
+		    alert ("Error");
+			return false;
+		   }
+	  }
+    </script>
+ </head>
+ <body>
+       <h1 align = "center">Reg Form</h1>
+	   <form name = "form1" action = "#" method= "POST">
+	   <label>Name</label>
+	   <input type ="text" name="Fname"/>
+	   <br/>
+	   <label>Address</label>
+	   <input type ="text" name="address"/>
+	   <br/>
+	   <label>Age</label>
+	   <input type ="number" name ="age"/>
+	   <br/>
+	   <label>Email</label>
+	   <input type = "email" name ="email"/>
+	   <br/>
+	   <input type ="Submit" name = "Submit" onclick ="validate()"/>
+	   <input type type = "Reset" name = "Reset"/>
+	   </form>
+	  
+ </body>
+</html>

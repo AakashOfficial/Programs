@@ -1,0 +1,29 @@
+-webkit-box-flex:1; - This is used when we do small the size of the browser then is shrink the size;
+                    - This can be used in the box to occupy the left space between the Boxes;
+-webkit-box-direction: - reverse; This is used to reverse the order of box;
+-webkit-box-ordinal-group: - 1,2,3,4;This is used to place at particular order;
+-webkit-box-pack:center,end; - This is used to place at center position of the page;
+-webkit-box-align:center,stretch; - put the things in the center;
+                                  - is used to stretch vertically;
+-webkit-border-radius:size; - yhis is used for round the corners or cut the corners;
+-webkit-box-shadow:rgb(x,y,z)size size size - this is used in two ways first given size in two arguments which shows the shadow and if we give three arguments then it also blur the
+                      porton of the shadow and size is given in pixels;in rgb red green blue values are given which is between 0 to 255. and if these values are negative then it make shadow in the taop.								  
+-webkit-box-shadow:rgb(x,y,z)size size size inset; - if inset is write then the shadow is in the box;
+
+-webkit-box-shadow:rgba(x,y,z,.a)size size size ; - this is alpha value used for transparency and value is given in decimal number.
+text-shadow:rgb(x,y,z) size size size; - it is used to shadow the text;
+background:-webkit-linear-gradient(top(no.deg),color1,color2); - this is used to shadow inside in the whole box or we can write position in degrees.
+                                                       - color1 is for top and color2 is for left part.
+background:-webkit-radial-gradient(center,circle,color%,color2%);	
+
+Transformations	
+Outline:size type(solid)colour; - this is used to outline.It gives additional Border.
+
+-webkit-transform:scale(size); - this is used to increase or decrease the size.we can give the valus in decimal.
+-webkit-transform:scale(x,y); - in this we give the value axiswise x-axis and y-axis.we can give the negative value of x and y.
+-webkit-transform:rotate(angle deg); - this is used for rotate angle wise.in this we can give the negative value of angle.
+-webkit-transform:sket(size deg); - this is used to make the angle between them.like parallelogram.
+-webkit-transform:translate(position,position); - this is used to put at the specific position and the position is in pixels.
+
+we can use all of these in one line -
+-webkit-transform:translate(position,position) rotate(degree) scale(size);										   
