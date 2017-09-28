@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About Us </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/Contact.css"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<link href='https://fonts.googleapis.com/css?family=Quicksand|Asap:700' rel='stylesheet' type='text/css'>
+
+<section class="contactcharacter" id="about">
+  <div class="contentwrapper" id="contact">
+    
+    <div class="character">
+      <div class="body"></div>
+      <div class="arm"></div>
+      <div class="head">
+        <div class="eyes"></div>
+      </div>
+      <div class="mug">
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+      </div>
+      <div class="contactme">
+        <div class="arrow"></div>
+      </div>
+      <div class="thoughts">
+        
+        <div class="abouttype">
+          <p>My name is Aakash Tyagi. I am a...</p>
+          <div class="imacontainer"><span class="ima"></span></div>
+          <p>I live in the Twin Cities metro area. I like to craft solutions.</p>
+
+          <span class="imawhat">web designer</span>
+          <span class="imawhat">wordpress plugin author</span>
+          <span class="imawhat">web developer</span>
+          <span class="imawhat">animator</span>
+        </div>
+
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact">
+    <span class="closer"></span>
+    <form>
+      <input class="input name"  name="name" type="text" value="" placeholder="name">
+      <input class="input email" name="email" type="email" value="" placeholder="email">
+      <textarea class="input message" name="message" placeholder="my awesome message!"></textarea>
+      <input name="commit" type="submit" value="submit" class="submit">        
+    </form>
+  </div>
+  
+</section>
+<script>
+    var cnt=0, texts=[];
+var $fclick = false;
+
+
+$(".imawhat").each(function() {
+  texts[cnt++]=$(this).text();
+});
+
+function fadeText() {
+  if (cnt>=texts.length) { cnt=0; }
+  $('.ima').html(texts[cnt++]);
+  $('.ima')
+    .fadeIn('fast').animate({opacity: 1.0}, 5000).fadeOut('fast',
+     function() {
+       return fadeText();
+     }
+  );
+}
+
+function toggleForm() {
+  if ($fclick === true) {
+    $(".contact, .head, .arm").toggleClass("active inactive");
+  } else {
+    $(".contact, .head, .arm").addClass("active");
+    $fclick = true;
+  }
+}
+
+$(".contactme, .arrow, .closer, .submit").on("click", toggleForm);
+
+fadeText();
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
