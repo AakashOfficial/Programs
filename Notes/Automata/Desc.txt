@@ -1,0 +1,21 @@
+______________________________________
+| NOTE:-                                                  |
+|         Atleast (km se km) >=                     |
+|         Atmost (jyada se jyada) <=              |
+|         Exact (Ek Dam Equal) =                   |
+|_____________________________________|
+
+1. Set of Strings which accepts length of string more than or equal to 2 over an alphabet a,b.
+2. Set of Strings which accepts length of string less than or equal to 2 over an alphabet a,b.
+3. Set of Strings which accepts string of length exact 2 ,atleast 2 ,atmost 2 over an alphabet a,b.
+4-a. Set of strings which accepts the string of length of string is even over an alphabet a,b(Infinite State not optimized).
+4-b. Set of strings which accepts the length of string is even over an alphabet a,b (not optimized).
+4-c. Set of strings which accepts the length of string is even and odd over an alphabet a,b (optimized).
+5. Set of strings which accept the length of string is divisible by 3 over an alphabet a,b (|w|3=0).
+----------------------------------------------------------------------------------------------------------------------------------------------------
+    NOTE:-If |w|3=1, then q1 is final state(remainder = 1).
+           :-If |w|3=2, then q2 is final state(remainder = 2).
+           :-To accept the length of string, then no. of state = size of length of string.
+           :-if we want to accept the string of length of string divisible by 4 then no. of state= 4.
+           :-if we want to accept the string of length of string divisible by 5 then no. of state=5.
+----------------------------------------------------------------------------------------------------------------------------------------------------
