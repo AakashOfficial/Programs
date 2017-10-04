@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+     <title>Rectangles</title>
+
+      <style> 
+         body {
+            background:#aaaaaa;
+         }
+
+         #canvas {
+            background:pink;
+            border: thin solid black;
+         }
+      </style>
+   </head>
+
+  <body>
+    <canvas id='canvas' width='500' height='500'>
+      Canvas not supported
+    </canvas>
+   <script>
+   var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d');
+context.fillRect(25,25,100,100);
+context.clearRect(45,45,60,60);
+context.strokeRect(50, 50, 50, 50);
+</script>
+</body>
+</html>
