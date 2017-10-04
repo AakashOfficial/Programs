@@ -1,0 +1,36 @@
+<!doctype html>
+ <head>
+ <title>Rectangles</title>
+
+  <style> 
+         body {background:cyan;}
+                                       
+
+         #canvas {
+            background:pink;
+            border: thin solid black;
+         }
+  </style>
+  </head>
+
+  <body>
+    <canvas id='canvas' width='500' height='500'>
+      Canvas not supported
+    </canvas>
+  <script>
+    var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d');
+    context.fillRect(25,25,100,100);
+    context.clearRect(27,22,5,110);
+    context.clearRect(35,20,5,110);
+    context.clearRect(45,20,5,110);
+    context.clearRect(56,20,5,110);
+    context.clearRect(70,20,5,110);
+    context.clearRect(89,20,4,110);
+    context.clearRect(110,20,2,110);
+</script>
+</body>
+</html>
+
+</body>
+</html>
