@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Create form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form id="evidence-form" class="form-horizontal">
+    <fieldset>
+
+        <fieldset>
+            <legend>BEL Statement</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="bel-statement"></label>  
+                <div class="col-md-8">
+                    <input id="bel-statement" name="bel-statement" placeholder="Subject Relationship Object" class="form-control input-md" required="" type="text">
+                    <span class="help-block">i.e. p(HGNC:AKT1) -> bp(MESHPP:Apoptosis)</span>  
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Citation</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="citation-pubmed-id">PubMed ID</label>  
+                <div class="col-md-8">
+                    <input id="citation-pubmed-id" name="citation-pubmed-id" placeholder="PubMed identifier" class="form-control input-md" required="" type="text">
+                    <span class="help-block">i.e. 9202001</span>  
+                </div>
+                <label class="col-md-4 control-label" for="citation-name">Name</label>  
+                <div class="col-md-8">
+                    <input id="citation-name" name="citation-name" placeholder="PubMed reference name" class="form-control input-md" required="" type="text">
+                    <span class="help-block">i.e. J Biol Chem. 1997 Jul 4;272(27):16917-23.</span>  
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Annotation</legend>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="summary-text">Summary Text</label>
+                <div class="col-md-4">                     
+                    <textarea class="form-control" rows="5" id="summary-text" name="summary-text"></textarea>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-horizontal row">
+                    <div class="control-group" id="fields">
+                        <div class="controls"> 
+                            <form role="form" autocomplete="off">
+                                <div class="entry input-group col-xs-6 form-group row">
+                                    <div class="col-md-6">
+                                        <input class="form-control" name="annotation_names[]" type="text" placeholder="Name" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="form-control" name="annotation_values[]" type="text" placeholder="Value" />
+                                    </div>
+                                	<span class="input-group-btn">
+                                        <button class="btn btn-success btn-add" type="button">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        </fieldset>
+
+        <!-- Button (Double) -->
+        <!--
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="create-button"></label>
+            <div class="col-md-8">
+                <button id="create-button" name="create-button" class="btn btn-success" onclick="create();">Create</button>
+                <button id="reset-button" name="reset-button" class="btn btn-info" onclick="reset();">Reset</button>
+            </div>
+        </div>
+        -->
+    </fieldset>
+</form>
+<script type="text/javascript">
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+    	$(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+</script>
+</body>
+</html>
