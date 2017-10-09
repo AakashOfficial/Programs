@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Portfolio Image Gallery With Modal - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .section-title h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+.section-title h2:before {
+	position: absolute;
+	background: #575757;
+	height: 2px;
+	width: 45px;
+	content: "";
+	bottom: 0;
+}
+.portfolio-menu button.mixitup-control-active {
+      background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+      border: 2px solid #4bcaff;
+      color: #4bcaff;
+      padding: 10px 15px;
+    font-weight: 700;
+    transition: .4s;
+    text-transform: uppercase;
+}
+.portfolio-menu button {
+      background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+      border: 2px solid transparent;
+      color: #515f67;
+      padding: 10px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.single-portfolio a {
+  display: block;
+  line-height: 0;
+  position: relative;
+}
+.single-portfolio a::before {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.single-portfolio:hover a::before {
+	opacity: .5;
+	transform: scale(1);
+}
+.single-portfolio a::after {
+  color: #fff;
+  content: "+";
+  font-size: 60px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+}
+.single-portfolio:hover a::after {
+	transform: scale(1);
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+		    <div class="section-title">
+			    <h2>Portfolio</h2>
+			</div>
+		</div>
+		<div class="col-md-8">
+		    <div class="portfolio-menu">
+                <button type="button" data-filter="all">All</button>
+                <button type="button" data-filter=".category-a">Bootstrap</button>
+                <button type="button" data-filter=".category-b">HTML5</button>
+                <button type="button" data-filter=".category-c">CSS3</button>
+                <button type="button" data-filter=".category-d">JS</button>
+            </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+    <div id="container" class="row">
+		<div class="col-md-4 mix category-a">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+		<div class="col-md-4 mix category-b">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+		<div class="col-md-4 mix category-c">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+		<div class="col-md-4 mix category-d">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+		<div class="col-md-4 mix category-a">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+		<div class="col-md-4 mix category-b">
+		    <div class="single-portfolio">
+				<a class="gallery-item" href="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg"><img class="img-responsive" src="https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg" alt="One" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+<script>
+    $(document).ready(function() {
+      // This will create a single gallery from all elements that have class "gallery-item"
+        $('.gallery-item').magnificPopup({
+          type: 'image',
+          gallery:{
+            enabled:true
+          }
+        });
+        
+        // MixItUp 2
+        $('#container').mixItUp();
+    });
+</script>
+</script>
+</body>
+</html>
