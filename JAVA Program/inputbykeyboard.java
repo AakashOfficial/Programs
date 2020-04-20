@@ -12,3 +12,4 @@ Class inputbykeyboard {
     System.out.println("your age is"+age+"and income in per annum is"+income);
   }
 }
+
