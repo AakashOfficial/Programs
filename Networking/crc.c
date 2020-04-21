@@ -46,3 +46,4 @@
 	 printf("%c",rem[i]);
 	getch();
 }
+
