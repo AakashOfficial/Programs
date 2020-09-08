@@ -14,6 +14,7 @@ public class MyConnection {
 	 if(con==null){
 		 throw new Exception("Connection is not created");
 	 }
+	 System.out.println("Created");
 	 return con;
  }
 }
