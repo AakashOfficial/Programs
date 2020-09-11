@@ -1,5 +1,4 @@
 package com.tyagi.Servlet;
-/*8036 8037 8038*/
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,7 +19,4 @@ public class RegisterServlet extends HttpServlet{
 		  
 		  out.close();
 	  }
-
 }
-
-
