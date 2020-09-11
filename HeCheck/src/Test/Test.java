@@ -3,7 +3,6 @@ package Test;
 import java.util.Scanner;
 import java.util.Iterator;
 import java.util.List;
-
 import source.Impleclass;
 import source.Imple;
 import getersetter.Data;
@@ -40,15 +39,17 @@ public class Test{
 	//for retrieving data from database
 	public static void ShowAll(){
 		try{
-			List<Data> List=comDAO.getAllComputer();
+		````List<Data> List=comDAO.getAllComputer();
 		    Iterator<Data> itr=List.iterator();
 		    System.out.println("Retrieving computer from Database...");
 			   while(itr.hasNext()){
 				   Data c=(Data)itr.next();
 				   System.out.println(c);
 			   }
-		}catch(Exception e){e.printStackTrace();}
-   }
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+        }
 	
 	//for delete a row in table in database
 	public static void Delete(int a){
@@ -61,6 +62,7 @@ public class Test{
 	public static void DeleteAll(){
 		comDAO.deleteAllComputer();
 	}
+	
 	public static void main(String args[]){
 		AddComputer();
 		//ShowAll();
