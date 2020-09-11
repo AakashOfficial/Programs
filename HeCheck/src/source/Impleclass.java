@@ -2,7 +2,6 @@ package source;
 
 import connection.Link;
 import getersetter.Data;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -50,7 +49,7 @@ public class Impleclass implements Imple {
 		   }
 	   }catch(Exception e){e.printStackTrace();}
 	   System.out.println(list);
-		   return list;
+	   return list;
    }
    
    @Override
