@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 
 public class Link {
 
-
  private static String driverName="";
  private static String dbUrl="jdbc:h2:~/test";
  private static String userName="sa";
