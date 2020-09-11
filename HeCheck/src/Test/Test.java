@@ -1,36 +1,3 @@
-/* for Showing data
-
-package test;
-
-import java.util.Iterator;
-import java.util.List;
-
-import dao.ComputerDAO;
-import dao.ComputerDAOImpl;
-import model.Computer;
-
-public class Test {
-	static ComputerDAO comDAO;	
-	static{
-		comDAO=new ComputerDAOImpl();
-	}
-	
-	public static void ShowAll(){
-		try{
-			List<Computer> List=comDAO.getAllComputer();
-		    Iterator<Computer> itr=List.iterator();
-		    System.out.println("Retrieving computer from Database...");
-			   while(itr.hasNext()){
-				   Computer c=(Computer)itr.next();
-				   System.out.println(c);
-			   }
-		}catch(Exception e){e.printStackTrace();}
-   }
-	public static void main(String args[]){
-		   ShowAll();
-	   }
-}*/
-
 package Test;
 
 import java.util.Scanner;
