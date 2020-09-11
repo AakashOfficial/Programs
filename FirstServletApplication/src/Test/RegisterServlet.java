@@ -18,8 +18,7 @@ public class RegisterServlet extends HttpServlet {
 	  String ln=req.getParameter("lastname");
 	  String ad=req.getParameter("address");
 	  String e=req.getParameter("email");
-	 // String c=req.getParameter("course");
-	  
+	  // String c=req.getParameter("course");
 	  
 	  out.println("<div style='background-color:red color:blue'><center><h1>Tyagi LTD<h1></center>");
 	  out.println("Your details:<br/>");
