@@ -46,3 +46,4 @@ public class MyData implements Serializable {
 		  return "MyData[rollno=" + rollno +",firstname=" + firstname + ", lastname=" + lastname +",address=" + address +",email="+ email +"]";
 	  }  
 }
+
