@@ -39,3 +39,4 @@ public class RegisterServlet  extends HttpServlet {
 	  out.close();
   }
 }
+
