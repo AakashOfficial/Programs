@@ -4,7 +4,6 @@ import com.tyagi.model.MyData;
 import java.util.List;
 
 public interface MyDataDAO {
-
   public boolean addData(MyData m);
   //public List<MyData> getAllData();
   //public boolean deleteData(int rollno);
