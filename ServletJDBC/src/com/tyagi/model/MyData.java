@@ -9,8 +9,7 @@ public class MyData implements Serializable {
 	  private String lastname;
 	  private String address;
 	  private String email;
-	  
-	  
+
 	  public int getRollno(){
 		  return rollno;
 	  }
@@ -46,4 +45,3 @@ public class MyData implements Serializable {
 		  return "MyData[rollno=" + rollno +",firstname=" + firstname + ", lastname=" + lastname +",address=" + address +",email="+ email +"]";
 	  }  
 }
-
