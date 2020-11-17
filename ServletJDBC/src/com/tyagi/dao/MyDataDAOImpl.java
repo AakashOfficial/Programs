@@ -10,29 +10,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyDataDAOImpl implements MyDataDAO {
-
-
-
-   private static Connection con;
-   static{
-	   try{
-		   con=MyConnection.getCon();
-	   }catch(Exception e){e.printStackTrace();}
-   }
+	
+	private static Connection con;
+	static{
+		try{
+			con=MyConnection.getCon();
+		}catch(Exception e){e.printStackTrace();}
+	}
    
-   @Override
-   public boolean addData(MyData m){
-	   String insertQuery="insert into computer values("+m.getRollno()+",'"+m.getFirstname()+"','"+m.getLastname()+"','"+m.getAddress()+"','"+m.getEmail()+"')";
-	   try{
+ 	@Override
+        public boolean addData(MyData m){
+		String insertQuery="insert into computer values("+m.getRollno()+",'"+m.getFirstname()+"','"+m.getLastname()+"','"+m.getAddress()+"','"+m.getEmail()+"')";
+	   	try{
 		   Statement stmt=con.createStatement();
 		   int i=stmt.executeUpdate(insertQuery);
 		   if(i==1){
-		   System.out.println("Computer is inserted with price"+m.getRollno());
-		   return true;
+		   	System.out.println("Computer is inserted with price"+m.getRollno());
+		   	return true;
 		   }
-	   }catch(Exception e){e.printStackTrace();}
-	   return false;
-   }
+	   	}catch(Exception e){e.printStackTrace();}
+	   	return false;
+   	}
 /*   
   @Override
    public List<MyData> getAllData(){
