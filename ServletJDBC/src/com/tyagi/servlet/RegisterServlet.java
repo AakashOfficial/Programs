@@ -20,23 +20,21 @@ import com.tyagi.model.MyData;
 @WebServlet("/ResgisetServlet")
 public class RegisterServlet  extends HttpServlet {
 	
- MyData m = new MyData();
+	MyData m = new MyData();
  
-  public void doPost(HttpServletRequest req,HttpServletResponse resp)throws ServletException,IOException {
-	  resp.setContentType("text/html");
-	  PrintWriter out=resp.getWriter();
-	  m.setRollno(Integer.parseInt(req.getParameter("rollno")));
-	  m.setFirstname(req.getParameter("firstname"));
-	  m.setLastname(req.getParameter("lastname"));
-	  m.setAddress(req.getParameter("address"));
-	  m.setEmail(req.getParameter("email"));
+  	public void doPost(HttpServletRequest req,HttpServletResponse resp)throws ServletException,IOException {
+		resp.setContentType("text/html");
+	  	PrintWriter out=resp.getWriter();
+	  	m.setRollno(Integer.parseInt(req.getParameter("rollno")));
+	  	m.setFirstname(req.getParameter("firstname"));
+	  	m.setLastname(req.getParameter("lastname"));
+	  	m.setAddress(req.getParameter("address"));
+	  	m.setEmail(req.getParameter("email"));
 	  
-	  MyDataDAO myDAO=new MyDataDAOImpl();
-	  boolean result=myDAO.addData(m);
+	  	MyDataDAO myDAO=new MyDataDAOImpl();
+	  	boolean result=myDAO.addData(m);
 		
-	  out.println("Data is Successfully inserted"+result);
-	  
-	  out.close();
-  }
+	  	out.println("Data is Successfully inserted"+result);
+	  	out.close();
+  	}
 }
-
