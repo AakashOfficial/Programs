@@ -11,7 +11,7 @@
   <url>http://maven.apache.org</url>
 
      <properties>
-		<springframework.version>5.2.3.RELEASE</springframework.version>
+		<springframework.version>5.3.14</springframework.version>
 
 		<hibernate.version>4.3.6.Final</hibernate.version>
 
